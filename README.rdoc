@@ -1,28 +1,29 @@
-== README
+Spree Invite a Friend Example
+=============================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Spree Invite a Friend Example is an example on how to install [DeviseInvitable](https://github.com/scambra/devise_invitable) on [Spree](http://spreecommerce.com).
+It's a demo application made for the [Installing Devise Invitable on Spree](http://nebulab.it/blog/installing-devise-invitable-on-spree/) blogpost.
 
-Things you may want to cover:
+Setup
+-----
 
-* Ruby version
+1. Clone the repo:
 
-* System dependencies
+        $ cd ~/Code
+        $ git clone git@github.com:nebulab/spree-invite-a-friend-example.git
+        $ cd spree-invite-a-friend-example
 
-* Configuration
+2. Installed the required gems:
 
-* Database creation
+        $ bundle install
 
-* Database initialization
+3. Create the development database (with example data):
 
-* How to run the test suite
+        $ rake db:setup && rake spree_sample:load
 
-* Services (job queues, cache servers, search engines, etc.)
+3. You're up and running. Just start the server:
 
-* Deployment instructions
+        $ rails server
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+4. Play around with Spree and DeviseInvitable. Login with your generated
+user and visit `http://localhost:3000/`.
